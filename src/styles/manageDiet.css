@@ -1,0 +1,179 @@
+/* General styles for managing diet plans */
+body {
+  font-family: "Alfa Slab One", Arial, sans-serif; /* Updated font */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Existing styles for the container */
+.container {
+  width: calc(80% - 250px); /* Adjust the width to account for the sidebar */
+  margin-left: 250px; /* Adjust the left margin to match the sidebar width */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #379d9d;
+  margin-bottom: 20px; /* Reduced margin for spacing */
+}
+
+/* Updated styles for the plan cards to resemble table rows */
+.plan-card {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items evenly */
+  align-items: center; /* Center items vertically */
+  background-color: #fafafa;
+  padding: 10px; /* Reduced padding */
+  margin-bottom: 10px; /* Reduced margin */
+  border-radius: 4px; /* Reduced border radius for a more angular look */
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow effect */
+  transition: transform 0.2s; /* Added hover effect */
+  height: 50px; /* Set fixed height for consistency */
+}
+
+.plan-card:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.meal-plan,
+.description,
+.notes {
+  margin-bottom: 0; /* Remove bottom margin for items in a row */
+  padding: 0 10px; /* Add some horizontal padding */
+}
+
+.meal-plan {
+  font-weight: bold;
+  font-size: 1em; /* Adjusted font size */
+  color: #333;
+}
+
+.image img {
+  width: 40px; /* Smaller image size */
+  height: auto;
+  border-radius: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+button.btn-edit,
+button.btn-delete {
+  padding: 5px 10px; /* Reduced padding */
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8em; /* Slightly reduced font size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transition for scaling */
+}
+
+button.btn-edit {
+  background-color: #4ecdc4;
+  color: white;
+}
+
+button.btn-edit:hover {
+  background-color: #379d9d;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button.btn-delete {
+  background-color: #e76f51;
+  color: white;
+}
+
+button.btn-delete:hover {
+  background-color: #c0392b;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Popup form styling for editing diet plans */
+.popup-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Adjusted width for a more compact form */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px; /* Reduced padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.popup-card.visible {
+  display: block;
+}
+
+.popup-card h2 {
+  text-align: center;
+  color: #379d9d;
+}
+
+.popup-card .form-group {
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.popup-card label {
+  display: block;
+  font-size: 1em; /* Slightly reduced font size */
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.popup-card textarea,
+.popup-card input[type="file"] {
+  width: 100%;
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fafafa;
+  transition: border-color 0.3s; /* Added transition for border */
+}
+
+.popup-card textarea:focus,
+.popup-card input[type="file"]:focus {
+  border-color: #379d9d; /* Change border color on focus */
+}
+
+.popup-card .form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-card .button {
+  padding: 10px 15px; /* Reduced padding */
+  border-radius: 5px;
+  font-size: 0.9em; /* Slightly reduced font size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transition for scaling */
+}
+
+.popup-card .button.submit {
+  background-color: #4ecdc4;
+  color: white;
+}
+
+.popup-card .button.submit:hover {
+  background-color: #379d9d;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.popup-card .button.cancel {
+  background-color: #e76f51;
+  color: white;
+}
+
+.popup-card .button.cancel:hover {
+  background-color: #c0392b;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}

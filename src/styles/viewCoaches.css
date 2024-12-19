@@ -1,0 +1,169 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin-left: 250px; /* Sidebar width */
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.coaches-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.coaches-container h2 {
+  text-align: center;
+  color: #1c3d3f;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px; /* Limit the width */
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #379d9d; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+.coaches-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.coaches-table th,
+.coaches-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+.coaches-table th {
+  background-color: #379d9d;
+  color: white; /* Change header text color */
+}
+
+.coaches-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra striping for rows */
+}
+
+.btn-edit,
+.btn-delete,
+.btn-add {
+  background-color: #379d9d;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Add transition effects */
+}
+
+.btn-edit:hover,
+.btn-delete:hover,
+.btn-add:hover {
+  background-color: #4ecdc4;
+  transform: translateY(-1px); /* Slight lift effect on hover */
+}
+
+.btn-add {
+  display: block;
+  margin: 20px auto 0; /* Add margin to the top */
+  font-size: 16px; /* Increase font size */
+  font-weight: bold; /* Make button text bold */
+}
+
+.btn-delete {
+  background-color: #e74c3c; /* Different color for delete button */
+}
+
+.btn-delete:hover {
+  background-color: #c0392b; /* Darker color on hover */
+}
+
+/* Popup form styles */
+/* Popup form styles */
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Make sure it's on top */
+  display: none; /* Initially hidden */
+}
+
+.popup-card.visible {
+  display: block; /* Show when visible class is added */
+}
+
+.popup-card h2 {
+  margin-top: 0; /* Remove default margin */
+  color: #1c3d3f; /* Match header color */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit {
+  background-color: #379d9d;
+  color: white;
+}
+
+.cancel {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.submit:hover {
+  background-color: #4ecdc4;
+}
+
+.cancel:hover {
+  background-color: #c0392b;
+}

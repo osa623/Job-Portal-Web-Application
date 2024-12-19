@@ -1,0 +1,190 @@
+/* regstyle.css */
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER STYLES */
+header {
+  background-color: #1c3d3f; /* Dark background for contrast */
+  padding: 15px 30px; /* Increased padding for a more spacious feel */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo a {
+  font-family: "Russo One", sans-serif; /* Custom font */
+  font-size: 32px; /* Larger font size for visibility */
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover color transition */
+}
+
+.logo a:hover {
+  color: #4ecdcc; /* Highlight color on hover */
+}
+
+nav {
+  display: flex; /* Flexbox for horizontal navigation */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Flexbox for nav items */
+  gap: 20px; /* Space between nav items */
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px; /* Padding for better clickability */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #4ecdcc; /* Highlight background color on hover */
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* Container Styles */
+#page-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added padding for responsiveness */
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px; /* Slightly increased border radius for a softer look */
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 800px; /* Increased max width for larger screens */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.container:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch items to fill container */
+  width: 100%; /* Ensure full width for the form */
+}
+
+.login-title {
+  font-size: 1.75rem; /* Increased font size for emphasis */
+  margin-bottom: 1.5rem; /* Increased margin for spacing */
+  text-align: center;
+  color: #1c3d3f; /* Color for the title */
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+  width: 100%; /* Ensure full width for input groups */
+}
+
+/* Gender Selection Styles */
+.input-group div {
+  margin-bottom: 1.5rem; /* Increased margin below gender selection */
+  display: flex; /* Use flexbox for layout */
+  gap: 15px; /* Space between radio buttons */
+  align-items: center; /* Center items vertically */
+}
+
+.input-group label {
+  margin-bottom: 0.5rem; /* Added margin for spacing between label and input */
+  font-size: 16px; /* Increased font size for better readability */
+  color: #1c3d3f; /* Color for the label */
+  display: block; /* Make label a block element */
+}
+
+.login-input {
+  width: 80%;
+  padding: 0.8rem 0.8rem 0.8rem 40px; /* Increased padding for comfort and space for the icon */
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Increased border radius for a softer look */
+  font-size: 16px; /* Increased font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth border color and shadow transition */
+}
+
+.login-input:focus {
+  border-color: #1c3d3f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(28, 61, 63, 0.5), 0 0 10px rgba(28, 61, 63, 0.3); /* Enhanced shadow on focus */
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Gender Selection Styles */
+.input-group div {
+  margin-bottom: 1.5rem; /* Increased margin below gender selection */
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold; /* Make error messages stand out */
+}
+
+/* Button Styles */
+.login-button {
+  background-color: #e76f51;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem; /* Increased padding for comfort */
+  border-radius: 6px; /* Increased border radius for consistency */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
+  width: 100%; /* Full width for buttons */
+  margin-bottom: 10px;
+}
+
+.login-button:hover {
+  background-color: #d9654d;
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Full width on small devices */
+    padding: 1.5rem; /* Adjusted padding for smaller screens */
+  }
+
+  .login-title {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  }
+
+  .login-input,
+  .login-button {
+    font-size: 15px; /* Adjusted font size for smaller screens */
+  }
+}

@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  margin-left: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.add-coach-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.add-coach-container h2 {
+  text-align: center;
+  color: #1c3d3f;
+  font-size: 24px; /* Increase font size for better visibility */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative; /* Enable positioning for error messages */
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #379d9d;
+  display: block; /* Make labels block-level for better spacing */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px; /* Ensure consistent font size */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #379d9d; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.form-group .error-message {
+  color: #e74c3c; /* Red for errors */
+  font-size: 12px; /* Smaller font for error messages */
+  position: absolute; /* Position error messages */
+  bottom: -18px; /* Adjust to sit below the input */
+  left: 0; /* Align to the left */
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #379d9d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Ensure button text is readable */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.btn-submit:hover {
+  background-color: #4ecdc4;
+}
+
+.success {
+  color: #2ecc71; /* Green for success messages */
+  text-align: center;
+  margin-top: 20px; /* Add margin for spacing */
+}

@@ -1,0 +1,210 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  margin-top: 60px; /* Spacing from the top */
+  text-align: center; /* Center align the heading */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  transition: width 0.3s ease-in-out;
+  margin-top: 20px; /* Spacing from the header */
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  margin: 20px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
+  overflow: hidden;
+}
+
+.package-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.package-icon {
+  background-color: #17a2b8;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: background-color 0.3s;
+}
+
+.package-icon img {
+  width: 45px;
+  height: 45px;
+}
+
+.package-card:hover .package-icon {
+  background-color: #138496;
+}
+
+.package-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.package-details {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.package-price {
+  font-size: 22px;
+  color: #28a745;
+  font-weight: 700;
+}
+
+.package-duration {
+  font-size: 15px;
+  color: #888;
+  margin-top: 8px;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-edit,
+.btn-delete {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.popup-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  z-index: 1000;
+  max-width: 450px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup-card.visible {
+  display: block;
+  opacity: 1;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.form-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.form-actions .cancel {
+  background-color: #6c757d;
+}
+
+/* Animation for Popup Modal */
+.popup-card {
+  animation: slide-down 0.5s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translate(-50%, -40%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container,
+  .container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .package-card {
+    width: 90%;
+  }
+}

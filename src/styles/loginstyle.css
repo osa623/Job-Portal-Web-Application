@@ -1,0 +1,184 @@
+/* General body styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fafafa; /* Light background for better contrast */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100vh; /* Full height for body */
+}
+
+/* HEADER STYLES */
+header {
+  background-color: #1c3d3f; /* Dark background for contrast */
+  padding: 15px 30px; /* Increased padding for a more spacious feel */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo a {
+  font-family: "Russo One", sans-serif; /* Custom font */
+  font-size: 32px; /* Larger font size for visibility */
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover color transition */
+}
+
+.logo a:hover {
+  color: #4ecdcc; /* Highlight color on hover */
+}
+
+nav {
+  display: flex; /* Flexbox for horizontal navigation */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Flexbox for nav items */
+  gap: 20px; /* Space between nav items */
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px; /* Padding for better clickability */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #4ecdcc; /* Highlight background color on hover */
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* LOGIN FORM STYLES */
+#page-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-grow: 1; /* Allow this section to grow */
+  padding: 2rem;
+  background-image: url("path/to/your/background-image.jpg"); /* Optional background image */
+  background-size: cover; /* Cover entire area */
+  background-position: center; /* Center image */
+}
+
+.container {
+  width: 100%;
+  max-width: 400px; /* Limit width for a more compact layout */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* White with slight transparency */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align children */
+}
+
+.container:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+h1.login-title {
+  font-size: 2rem; /* Increase title font size */
+  text-align: center; /* Center align title */
+  margin-bottom: 20px; /* Space below title */
+  color: #1c3d3f; /* Title color */
+}
+
+/* Adjust input fields for better accessibility and UX */
+.input-wrapper {
+  position: relative;
+  width: 100%; /* Full width for input wrapper */
+  margin-bottom: 20px; /* Space between input fields */
+}
+
+label {
+  display: block; /* Make label block level */
+  margin-bottom: 5px; /* Space below label */
+  color: #1c3d3f; /* Label color */
+}
+
+.login-input {
+  width: 100%; /* Full width for inputs */
+  padding: 12px 40px; /* Space for icons */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 16px; /* Increase font size */
+  box-sizing: border-box; /* Include padding in width calculation */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus effect */
+}
+
+.login-input:focus {
+  border-color: #379d9d; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(55, 157, 157, 0.5); /* Subtle shadow on focus */
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 10px; /* Space from the left */
+  top: 50%; /* Center icon vertically */
+  transform: translateY(-50%); /* Adjust for vertical center */
+  color: #1c3d3f; /* Icon color */
+}
+
+/* Submit button styles */
+.login-button {
+  width: 100%; /* Full width button */
+  padding: 12px;
+  background-color: #1c3d3f; /* Match header color */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s; /* Transition for background */
+}
+
+.login-button:hover {
+  background-color: #379d9d; /* Lighter shade on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Error message styles */
+.error {
+  color: red; /* Red color for error messages */
+  text-align: center; /* Center error messages */
+  margin-bottom: 15px; /* Space below error messages */
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: center; /* Center align */
+  margin-top: 10px; /* Space above link */
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  color: #1c3d3f; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+.forgot-password a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .container {
+    width: 90%; /* Increase container width on small screens */
+  }
+}
